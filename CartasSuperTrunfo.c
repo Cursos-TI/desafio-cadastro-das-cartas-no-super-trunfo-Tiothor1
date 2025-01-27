@@ -1,61 +1,68 @@
-#include <stdio.h>
+#include <stdio.h> // Biblioteca para entrada e saída
 
 int main (){
     //Variáveis para armazenar os dados de uma única cidade
-    char codigo[4];     // Código da cidade (ex: A01, B02)
-    char nome[20];      // Nome da cidade (máximo 19 caracteres)
-    int populacao;      // População da cidade
-    float area;         // Área da cidade em km²
+    int populacao1, populacao2, populacao3;    // População
+    float area1, area2, area3;    // Área
+    float pib1, pib2, pib3;    // PIB
+    int pontos1, pontos2, pontos3;    // Pontos turísticos
 
-    int numCartas;      // Quantidade de cidades (cartas) que o ussuário deseja cadastrar
-    
-    // Pergunta ao usuário quantas cartas ele quer cadastrar
-    printf("Quantas cartas deseja cadastrar? ");
-    scanf("%d", &numCartas);    // %d para inteiros
+    // Cadastro da primeira cidade
+    printf("Cadastro da primeira cidade: \n");
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao1);
+    printf("Digite a área da cidade (em km²): ");
+    scanf("%f", &area1);
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib1);
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontos1);
 
-    // Início do laço "for" para cadastrar várias cidades.
-    // - 'int i = 0': Inicializa o contador 'i' em 0. Esse contador será ussado para controlar as repetiçõe.
-    // - 'i < numCartas': O laço vai continuar enquanto 'i' for menor que 'numCartas' (quantidade de cartas).
-    // - 'i++': Após cada repetição, o valor de 'i' é incrementado em 1.
-    // Aqui ficam as instruções que serão repetidas.
+    // Cadastro da segunda cidade
+    printf("\nCadastro da segunda cidade: \n");
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao2);
+    printf("Digite a área da cidade (em km²): ");
+    scanf("%f", &area2);
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib2);
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontos2);
 
-    for (int i = 0; i < numCartas; i++) {
+    // Cadastro da terceira cidade
+    printf("\nCadastro da terceira cidade: \n");
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao3);
+    printf("Digite a área da cidade (em km²): ");
+    scanf("%f", &area3);
+    printf("Digite o PIB da cidade (em bilhões): ");
+    scanf("%f", &pib3);
+    printf("Digite o número de pontos turísticos: ");
+    scanf("%d", &pontos3);
 
-        // Mensagem indicando o início do cadastro da proxima cidade.
-        printf("\n--- Cadastro da Carta %d ---\n", i + 1);
+    // Exibição dos dados cadastrados
+    printf("\n--- Cidades Cadastradas ---\n");
 
-        // Lê o código da cidade (ex: A01, B02).
-        printf("Digite o código da cidade (ex: A01): ");
-        scanf("%s", codigo); //'%s' para ler uma string (texto sem espaços).
+    // Exibição da primeira cidade
+    printf("\nPrimeira cidade: \n");
+    printf("População: %d habitantes\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões\n", pib1);
+    printf("Pontos turísticos: %d\n", pontos1);
 
-        // Lê o nome da cidade.
-        printf("Digite o nome da cidade (sem espaços, maximo 19 caracteres): ");
-        scanf("%s", nome);
+    // Exibição da segunda cidade
+    printf("\nSegunda cidade: \n");
+    printf("População: %d habitantes\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões\n", pib2);
+    printf("Pontos turísticos: %d\n", pontos2);
 
-        // Lê a polulação da cidade (número inteiro).
-        printf ("Digite a população da cidade: ");
-        scanf("%d", &populacao); // '%d' para ler um número inteiro.
+    // Exibição da terceira cidade
+    printf("\nTerceira cidade: \n");
+    printf("População: %d habitantes\n", populacao3);
+    printf("Área: %.2f km²\n", area3);
+    printf("PIB: %.2f bilhões\n", pib3);
+    printf("Pontos turísticos: %d\n", pontos3);
 
-        // Lê a área da cidade (número decimal).
-        printf("Digite a área da cidade (em km²): ");
-        scanf("%f", &area); // '%f' para ler um número com casas decimais.
-
-        // Exibe os dados da cidade cadastrada.
-        printf("\n--- Dados da Cidade Cadastrada ---\n");
-        printf("Código: %s\n", codigo);     // Mostra o codigo da cidade.
-        printf("Nome: %s\n", nome);     // Mostra o nome da cidade.
-        printf("População: %d habitantes\n", populacao);     // Mostra a população     
-        printf("Área: %.2f km²\n", area);        // Mostra a área, com 2 casas decimais.
-    }
-        printf("\n--- Dados da Cidade Cadastrada ---\n");
-        printf("Código: %s\n", codigo);     // Mostra o codigo da cidade.
-        printf("Nome: %s\n", nome);     // Mostra o nome da cidade.
-        printf("População: %d habitantes\n", populacao);     // Mostra a população     
-        printf("Área: %.2f km²\n", area);        // Mostra a área, com 2 casas decimais.
-    
-
-    // Mensagem final após o término do cadastro.
-    printf("\nCadastro concluído. Obrigado por usar o programa!\n");
-
-    return 0; // Indica que o programa terminou corretamente.
+    return 0;
 }
